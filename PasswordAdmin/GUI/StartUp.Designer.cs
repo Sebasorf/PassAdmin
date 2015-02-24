@@ -41,6 +41,7 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.cmbAccount = new System.Windows.Forms.ComboBox();
+            this.txtAccount = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
             this.FindToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.FindToolStripMenuItem.Text = "Find Account";
-            this.FindToolStripMenuItem.Click += new System.EventHandler(this.buscarCuentaToolStripMenuItem_Click);
+            this.FindToolStripMenuItem.Click += new System.EventHandler(this.findAccountToolStripMenuItem_Click);
             // 
             // AddToolStripMenuItem
             // 
@@ -126,6 +127,7 @@
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Visible = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // txtUser
             // 
@@ -153,11 +155,20 @@
             this.cmbAccount.Size = new System.Drawing.Size(244, 21);
             this.cmbAccount.TabIndex = 8;
             // 
+            // txtAccount
+            // 
+            this.txtAccount.Location = new System.Drawing.Point(151, 59);
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(244, 20);
+            this.txtAccount.TabIndex = 9;
+            this.txtAccount.Visible = false;
+            // 
             // StartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 237);
+            this.Controls.Add(this.txtAccount);
             this.Controls.Add(this.cmbAccount);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
@@ -168,7 +179,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartUp";
-            this.Text = "Form1";
+            this.Text = "Pass Admin";
+            this.Load += new System.EventHandler(this.StartUp_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,6 +203,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.ComboBox cmbAccount;
+        private System.Windows.Forms.TextBox txtAccount;
     }
 }
 
